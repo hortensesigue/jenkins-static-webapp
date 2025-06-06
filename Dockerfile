@@ -1,5 +1,5 @@
 # Base image
-FROM centos:7
+FROM amazonlinux:2
 
 # Description
 LABEL Description="Dockerfile to contenerize an apache app"
