@@ -36,7 +36,7 @@ pipeline {
             steps {
                 echo 'Deploy the image to DockerHub'
                 sh 'docker login'
-                sh 'docker push DOCKERHUB_REPO:v$BUILD_NUMBER'
+                sh 'docker push ${DOCKERHUB_REPO}:v${BUILD_NUMBER}'
             }
         }
     }
