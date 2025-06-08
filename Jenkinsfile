@@ -37,7 +37,7 @@ pipeline {
                 echo 'Deploy the image to DockerHub'
                 sh 'docker login'
                 sh 'docker push ${DOCKERHUB_REPO}:v${BUILD_NUMBER}'
-                echo 'done et done and yes'
+                echo 'done et done and yes yup'
             }
         }
     }
