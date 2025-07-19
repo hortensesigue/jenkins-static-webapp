@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-application
+  labels:
+    name: my-application-l
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      name: my-application-l
+  template:
+    metadata:
+      labels:
+        name: my-application-l
+    spec:
+      containers:
+        - name: my-application-con
+          image: hortensehouendji/jenkins-static-webapp:v4
+          ports:
+            - containerPort: 80
